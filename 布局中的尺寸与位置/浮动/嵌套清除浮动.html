@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box1{
+      width:200px;
+      border: 2px black solid;
+      background: pink;
+    }
+    .box2 {
+      width: 100px;
+      height: 100px;
+      background: skyblue;
+      float: left;
+    }
+    /* 设置伪类, 在父元素中添加空内容, 将其设置为块级盒子 */
+    .clearfix::after{
+      content: '';
+      clear: both;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="box1 clearfix">
+    box1
+    <div class="box2"></div>
+    <!-- 设置和浮动元素同级别的空标签清除浮动, 来把父元素的撑开 -->
+    <!-- <div style="clear: both;"></div> -->
+  </div>
+  box1后面的内容
+
+</body>
+</html>

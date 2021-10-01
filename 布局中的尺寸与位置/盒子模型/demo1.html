@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box1 {
+      width: 100px;
+      height: 100px;
+      background: pink;
+      padding: 20px;
+      /* 边框有背景色, margin没有背景色 */
+      border: 5px rgba(0, 0, 0, 0.5) solid;
+      margin-top: 20px;
+    }
+    .box2 {
+      width: 100px;
+      height: 100px;
+      background: skyblue;
+      /* f负值会叠在一起 */
+      margin: -5px 0px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box1">我是一个盒子</div>
+  <div class="box2">我是另一个盒子</div>
+</body>
+</html>
