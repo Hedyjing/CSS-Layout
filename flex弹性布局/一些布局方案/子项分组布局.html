@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .main {
+      height: 100px;
+      background: skyblue;
+      display: flex;
+      align-items: stretch;
+    }
+    /* 伪类选取第一个子元素 */
+    .main :nth-of-type(1) {
+      margin-right: auto;
+    }
+    .main div {
+      width: 100px;
+      background: pink;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>

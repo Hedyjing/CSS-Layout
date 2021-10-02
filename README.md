@@ -76,3 +76,108 @@
   可以看作是relative和固定定位的混合, 元素在跨越特定阈值前为相对定位, 之后为绝对定位
 > z-index
 - 默认为0, 大的值在上面, 如果有嵌套, 则和以父元素的z-index为准
+
+## flex弹性布局
+> 概念: 弹性盒子是一种用于按行或列布局元素的一维布局方法(一行一列). 元素可以膨胀以填充额外的空间, 收缩以适应更小的空间
+
+### 主轴于交叉轴
+- 主轴默认水平从左到右排列
+- 交叉轴默认垂直从上到下排列
+- flex容器的属性
+  1. flex-direction
+    > 改变轴方向
+
+      - row(默认)
+      - row-reverse 主轴从右到左
+      - column 主轴从上到下
+      - column-reverse 主轴从下到上
+  2. flex-wrap
+    > 换行
+
+      - nowarp(默认不换行)
+      - wrap
+      - wrap-reverse
+
+      有几行就把容器平分成几分, 然后把这一行放在刚行的最顶端
+      
+      如果容器没有设置高度, 那么就不会平分, 一行挨着一行
+  3. flex-flow
+    > direction和wrap的简写, 比如: flex-flow: column wrap
+  
+  4. justify-content
+    > 主轴对齐
+
+      - flex-start(默认)
+      - flex-end
+      - center
+      - space-around
+        子项左右两边分配一样, 中间间隔是左右两边间隔的二倍
+      - space-between
+        左右两边无空隙
+      - space-evenly
+        所有空隙都相等      
+  5. align-items
+    > 不需要设置换行就可以生效
+    > 交叉轴每一行中的对齐方式
+
+      - stretch(默认)
+      - flex-start
+      - flex-end
+      - center
+      - baseline
+        	项目的第一行文字的基线对齐
+  6. align-content
+    > 交叉轴,整体多行的对齐, 不换行时该属性不生效, 所以要设置flex-wrap属性
+
+      - stretch(默认) 高度拉升效果
+      - flex-start
+      - flex-end
+      - center
+      - space-around
+        行上下两边分配一样, 中间间隔是上下两边间隔的二倍
+      - space-between
+        上下两边无空隙
+      - space-evenly
+        所有空隙都相等    
+- flex子项属性
+  1. order
+    > 默认值是0, 改变某一个flex子项的排序位置
+  2. flex-grow
+    > 占用剩余空间的比例, 默认值是0, 表示不占用剩余的空白间隙扩展自己的宽度
+
+      - flex-grow:1 占满剩余的所有空间
+      - flex-grow:0.5 多占剩余空间的一半
+      - 大于等于1都会占满整个空间
+      - 当多个元素时, 所有flex-grow的和加起来大于1时, 占满整个剩余空间, 按照比例给原色分配
+  3. flex-shrink
+    > 默认值是1, 表示flex容器空间不足时, 元素的收缩比例, 1就表示溢出的空间,
+    
+      - flex-shrink大于等于1才会不溢出, 小于1会溢出
+  4. flex-basis
+    > 默认值是auto, 指定了flex元素在主轴方向上的初始大小
+
+    - 优先级大于width/height
+    - 用来给宽高改变方向, 当主轴变化时自动改变方向
+    - 可选值有, 100% auto 固定值 0
+  5. flex
+    > flex属性是flex-grow, flex-shrink, flex-basis的简写
+  6. align-self
+    > 默认值是auto, 控制单独某一个flex子项的垂直对齐方式
+      
+      - auto和父容器align-items的值一样
+### 居中方案
+- flex居中
+- margin: auto
+- 绝对定位50%
+### 一些布局方案
+  - 不定项居中
+  - 均分列布局
+    > 适用于移动端底部的导航
+  - 子项分组布局
+  - 等高布局
+  - 两列&三列布局
+  - sticky-footer布局
+    利用flex-grow
+  - 溢出项布局
+    利用flex-shrink
+
