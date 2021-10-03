@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./iconfont.css">
+  <style>
+    body {
+      background: #F6F6F6;
+    }
+
+    .header-container {
+      background: white
+    }
+
+    .header-wrapper {
+      margin: 0 auto;
+      height: 52px;
+      min-width: 1000px;
+      max-width: 1156px;
+      display: flex;
+      align-items: center;
+    }
+
+    .header-logo {
+      margin-right: 40px;
+    }
+
+    .header-nav {
+      display: flex;
+      flex-shrink: 0;
+    }
+    li {
+      width: auto;
+      margin-right: 30px;
+    }
+    .header-search{
+      flex-grow: 1;
+      width: 482px;
+    }
+    .header-search-input{
+      height: 34px;
+      display: flex;
+      justify-content: space-between;
+      background: #f6f6f6;
+      border-radius: 100px;
+    }
+    .header-search-input input {
+      background: none;
+      border: none;
+      flex-grow: 1;
+      margin-left: 20px
+    }
+    .header-search-input i{
+      align-self: center;
+      margin-right: 20px;
+    }
+    .header-btn {
+      display: flex;
+    }
+    .header-btn-login {
+      width: 60px;
+      height: 34px;
+      background: none;
+      color: #0066ff;
+      border: 1px #0066ff solid;
+      border-radius: 3px;
+      display: block;
+      margin-left: 20px;
+      cursor: pointer;
+    }
+    .header-btn-join {
+      width: 90px;
+      height: 34px;
+      background: #0066ff;
+      border: none;
+      color: white;
+      border-radius: 3px;
+      display: block;
+      margin-left: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-logo">
+        <a href="#">
+          <img src="./logo.png" alt="">
+        </a>
+      </div>
+      <ul class="header-nav">
+          <li>首页</li>
+          <li>会员</li>
+          <li>发现</li>
+          <li>等你来答</li>
+      </ul>
+      <div class="header-search">
+        <div class="header-search-input">
+          <input type="text" placeholder="520等你来">
+          <i class="iconfont icon-fangdajing"></i>
+        </div>
+      </div>
+      <div class="header-btn">
+        <button class='header-btn-login'>登录</button>
+        <button class='header-btn-join'>加入知乎</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
