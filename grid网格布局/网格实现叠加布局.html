@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .main {
+      width: 530px;
+      height: 300px;
+      display: grid;
+    }
+
+    .main p {
+      grid-area: 1/1/2/2;
+      align-self: end;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      height: 30px;
+      text-align: center;
+      line-height: 30px;
+    }
+    .main img {
+      grid-area: 1/1/2/2;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <img src="./phone.png" alt="">
+    <p>手机热卖中</p>
+  </div>
+</body>
+
+</html>

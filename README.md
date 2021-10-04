@@ -181,3 +181,64 @@
   - 溢出项布局
     利用flex-shrink
 
+## grid网格布局
+  > 二维布局
+  > grid容器属性
+
+    - justify-items
+      水平方向
+    - align-items
+      垂直方向
+    - place-items
+      简写
+    以上三项默认值是stretch, 指定了子项在网格中的对齐方式
+    ---------------------
+    - justify-content
+    - align-content
+    - place-content
+    以上三项默认值是stretch, 指定了所有网格整体在grid容器中的对齐方式
+    ----------------------------
+    - grid-auto-flow
+      默认值为row
+    - grid-auto-rows
+    - grid-auto-columns
+    以上三项指定隐式网格
+    ----------------------
+    - grid-template-rows
+    - grid-template-columns
+      基于网格行和列的维度, 去定义网格线的名称和网格轨道的尺寸大小
+    - grid-template-areas
+      使用命名方式定义网格区域, 需配合grid-area属性进行使用
+    - grid-template
+      是以上三个template的简写
+    -------------------------
+    - grid-row-gap
+    - grid-column-gap
+    - grid-gap
+      以上三个用于设置元素行列之间的间隙大小, 推荐使用row-gap, column-gap, gap可以用在其他布局中
+  > grid子项属性
+
+    - grid-column-start
+    - grid-column-end
+    - grid-row-start
+    - grid-row-end
+    以上四项表示grid子项所占据的区域的起始和终止位置, 包括水平方向和垂直方向默认值为auto, 不写全的话后面的元素会在后面排列, 写上值的话后面的元素会自动填充空的区域
+    - grid-row
+    - grid-column
+    - grid-area
+    以上三项是grid-column/row-start/end 的简写
+      - 指定区域的名字
+      - grid-row-start, grid-column-start, grid-row-end, grid-column-end属性的缩写, 额外支持grid-templage-areas设置的网格名称
+      位置不对应会自动填充
+    -------------------------
+    - justify-self
+    - align-self
+    - place-self
+    跟place-item用法相同, 只不过是操作指定的子项
+
+  > 网格方法
+
+    - repeat()
+      repeat()方法及auto-fill可选值, 指定可重复的数值
+    - minmax()
+      指定最小最大值

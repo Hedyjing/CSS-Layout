@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./reset.css">
+  <style>
+    .main {
+      width: 308px;
+      padding: 10px 14px;
+      border: 1px #dadadc solid;
+      margin: 10px auto;
+    }
+
+    .title {
+      height: 30px;
+      display: flex;
+      align-items: center;
+      margin-left: 15px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .grid-container {
+      width: 280px;
+      height: 352px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      gap: 8px;
+      margin: 0 14px;
+      grid-template-areas:
+        "a1 a3 a3"
+        "a2 a3 a3"
+        "a4 a4 a5"
+        "a6 a7 a7"
+      ;
+    }
+
+    .grid-container div {
+      height: 100%;
+      width: 100%;
+      line-height: 30px;
+    }
+
+    .grid-container div p {
+      text-align: center;
+      color: white;
+    }
+
+    .grid-container div h3 {
+      text-align: right;
+      color: white;
+      margin-right: 3px;
+    }
+
+    .grid-container div:nth-of-type(3) {
+      grid-area: a3;
+    }
+
+    .grid-container div:nth-of-type(4) {
+      grid-area: a4;
+    }
+
+    .grid-container div:nth-of-type(7) {
+      grid-area: a7;
+    }
+
+    .theme1 {
+      background-image: linear-gradient(#187fe6, #32acf5);
+    }
+
+    .theme2 {
+      background-image: linear-gradient(#f2246c, #fe5bac);
+    }
+
+    .theme3 {
+      background-image: linear-gradient(#d46300, #e5ad1c);
+    }
+
+    .page {
+      height: 40px;
+      margin-right: 10px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .page a {
+      border: 1px #dadadc solid;
+      margin-left: 2px;
+      padding: 4px;
+    }
+    .page span {
+      margin-right: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <div class="title">今日上榜</div>
+    <div class="grid-container">
+      <div class="theme1">
+        <h3>实时热点</h3>
+        <p>阿里第一芯</p>
+      </div>
+      <div class="theme2">
+        <h3>实时热点</h3>
+        <p>阿里第一芯</p>
+      </div>
+      <div class="theme1">
+        <h3>实时热点</h3>
+        <p>阿里第一芯</p>
+      </div>
+      <div class="theme1">
+        <h3>实时热点</h3>
+        <p>阿里第一芯</p>
+      </div>
+      <div class="theme1">
+        <h3>实时热点</h3>
+        <p>阿里第一芯</p>
+      </div>
+      <div class="theme3">
+        <h3>实时热点</h3>
+        <p>阿里第一芯</p>
+      </div>
+      <div class="theme3">
+        <h3>实时热点</h3>
+        <p>阿里第一芯</p>
+      </div>
+    </div>
+    <div class="page">
+      <span>1</span>
+      <a href="#">2</a>
+      <a href="#">3</a>
+    </div>
+  </div>
+</body>
+
+</html>
